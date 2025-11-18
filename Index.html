@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef & Baker | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #fff8f1;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+        position: sticky;
+        top: 0;
+        background: white;
+        padding: 18px 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        z-index: 100;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+    }
+
+    nav a:hover {
+        color: #d57b38;
+    }
+
+    /* HERO */
+    .hero {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://images.unsplash.com/photo-1546833999-b9f581a1996d") center/cover no-repeat;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        animation: fadeIn 1.2s ease-out;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    }
+
+    .btn {
+        background: #d57b38;
+        color: white;
+        padding: 14px 30px;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background: #a95e2d;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.7s ease-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 70px 40px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    /* MENU UPGRADE */
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    .menu-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: .3s;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .menu-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .menu-card div {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* ORDER FORM */
+    .order-form {
+        max-width: 450px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp {
+        position: fixed;
+        bottom: 25px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-decoration: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        z-index: 200;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Chef Baker</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Premium Bakery & Chef Services</h1>
+        <p>Delicious. Fresh. Crafted With Love.</p>
+        <a class="btn" href="#menu">Explore Menu</a>
+    </div>
+</section>
+
+<section class="section reveal" id="about">
+    <h2 class="title">About The Chef</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center;">
+        A professional chef and baker specializing in artisanal pastries, cakes, and modern culinary creations.
+    </p>
+</section>
+
+<section class="section reveal" id="menu">
+    <h2 class="title">Signature Menu</h2>
+
+    <div class="menu-container">
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1608198093002-84f3e9957a20">
+            <div><h3>Chocolate Cake</h3><p>$25</p></div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b">
+            <div><h3>Croissants</h3><p>$15</p></div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642">
+            <div><h3>Fruit Tarts</h3><p>$18</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section reveal" id="order">
+    <h2 class="title">Place an Order</h2>
+
+    <form class="order-form" onsubmit="event.preventDefault(); alert('Order Submitted (frontend only). Backend coming later.');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Phone Number" required>
+
+        <select required>
+            <option value="">Select Menu Item</option>
+            <option>Chocolate Cake</option>
+            <option>Croissants</option>
+            <option>Fruit Tarts</option>
+        </select>
+
+        <input type="number" placeholder="Quantity" required>
+
+        <textarea rows="4" placeholder="Extra notes..."></textarea>
+
+        <button class="btn" style="width:100%;">Submit Order</button>
+    </form>
+</section>
+
+<section class="section reveal" id="gallery">
+    <h2 class="title">Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d">
+    </div>
+</section>
+
+<section class="section reveal" id="contact">
+    <h2 class="title">Contact</h2>
+    <p style="text-align:center;">Email: chef@example.com</p>
+    <p style="text-align:center;">Instagram: @chef_baker</p>
+</section>
+
+<footer>
+    © 2025 Chef Baker. All rights reserved.
+</footer>
+
+<!-- WhatsApp Floating -->
+<a href="https://wa.me/1234567890" class="whatsapp">💬</a>
+
+<script>
+    // Reveal Animation On Scroll
+    function reveal() {
+        document.querySelectorAll(".reveal").forEach(el => {
+            let top = el.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) el.classList.add("active");
+        });
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+
+</body>
+</html>
