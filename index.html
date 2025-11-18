@@ -29,6 +29,56 @@
         z-index: 100;
     }
 
+    /* MOBILE NAV DEFAULT HIDDEN */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* NAV MOBILE STYLE */
+@media (max-width: 800px) {
+
+    header {
+        padding: 15px 25px;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 0;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* When active */
+    nav.active {
+        display: flex;
+        animation: fadeDown 0.4s ease;
+    }
+
+    @keyframes fadeDown {
+        from {opacity: 0; transform: translateY(-20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+}
+
     nav a {
         margin: 0 15px;
         text-decoration: none;
